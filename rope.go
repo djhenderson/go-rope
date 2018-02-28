@@ -47,6 +47,9 @@ func (rope *Rope) Len() int {
 
 //String returns the complete string stored in the rope.
 func (rope *Rope) String() string {
+	if rope.length == 0 {
+		return ""
+	}
 	return rope.Report(1, rope.length)
 }
 
